@@ -1,0 +1,28 @@
+{
+  "name": "eslint-plugin-no-floating-promise",
+  "version": "1.0.0",
+  "description": "Detects missing await on async function calls",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin",
+    "Flow",
+    "async"
+  ],
+  "author": "Sebastien Guillemot",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha tests --recursive"
+  },
+  "dependencies": {
+    "requireindex": "1.2.0"
+  },
+  "devDependencies": {
+    "eslint": "6.4.0",
+    "mocha": "6.2.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "license": "MIT"
+}
