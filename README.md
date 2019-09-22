@@ -150,3 +150,9 @@ function bar() {
 However, adding an `await` here is not  possible because `bar` is not an async function. In fact, my auto-fix rule would add an `await` in front of `foo` which would result in a compiler error.
 
 However, likely this actually is an error and the user actually should make `bar` an async function. However, I am open to disabling this rule in this context if that's what people want.
+
+# Limitations
+
+1) It cannot make use of Flow inference (you need to explicitly specify types)
+2) It does not work across file boundaries (if import a function from a different file, you don't have any information)
+3) It doesn't work on member function calls (`foo.bar()` will not detect  an error  even if  `bar` is an async function)
