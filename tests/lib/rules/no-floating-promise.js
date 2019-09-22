@@ -99,6 +99,16 @@ ruleTester.run("no-floating-promise", rule, {
             // no error if then is used
             code: "async function foo() {}; async function wrap() { foo().then(() => {}); }",
             parserOptions: { ecmaVersion: 8 }
+        },
+        {
+
+            // This should fail but unfortunately it doesn't
+            code: "class Foo { async bar() { } }; const foo = new Foo(); foo.bar();",
+        },
+        {
+            code: 'const foo = async ( lambda: void=>void ) { lambda(); }',
+            parser: parser("no-floating-promise-argument"),
+            parserOptions: { ecmaVersion: 8 }
         }
     ],
     invalid: [
@@ -151,6 +161,15 @@ ruleTester.run("no-floating-promise", rule, {
             parser: parser("floating-promise-typed-expression"),
             parserOptions: { ecmaVersion: 8 },
             errors: [{ messageId: "foundFloating" }]
-        }
+        },
+        {
+
+            // calling a lambda function argument
+            code: 'class Foo { foo = async ( lambda: (void=>Promise<void>) ) => { lambda(); }}',
+            output: 'class Foo { foo = async ( lambda: (void=>Promise<void>) ) => { await lambda(); }}',
+            parser: parser("floating-promise-argument"),
+            parserOptions: { ecmaVersion: 8 },
+            errors: [{ messageId: "foundFloating" }]
+        },
     ]
 });
