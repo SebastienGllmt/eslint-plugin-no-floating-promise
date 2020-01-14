@@ -2,6 +2,8 @@
 
 Detects missing await on async function calls
 
+If you are using Flow you may be interested in [this](https://github.com/facebook/flow/pull/8260) instead
+
 ## Installation
 
 You'll first need to install [ESLint](http://eslint.org):
