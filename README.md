@@ -2,7 +2,11 @@
 
 Detects missing await on async function calls
 
-If you are using Flow you may be interested in [this](https://github.com/facebook/flow/pull/8260) instead
+**STOP**: Are you a Flow or a Typescript user?
+Prefer these:
+- Flow: [link](https://github.com/facebook/flow/pull/8260)
+- Typescript: [link](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-floating-promises.md)
+
 
 ## Installation
 
