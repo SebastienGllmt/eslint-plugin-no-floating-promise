@@ -1,3 +1,5 @@
+Updated version of plugin to include validation when assigning to a variable.
+
 # eslint-plugin-no-floating-promise
 
 Detects missing await on async function calls
