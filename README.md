@@ -42,7 +42,7 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "no-floating-promise/rule-name": 2
+        "no-floating-promise/no-floating-promise": 2
     }
 }
 ```
