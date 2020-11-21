@@ -11,7 +11,9 @@
   ],
   "author": "Sebastien Guillemot",
   "main": "lib/index.js",
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "test": "mocha tests --recursive"
   },
