@@ -66,7 +66,7 @@ but the code gets refactored so that writing to the database is asynchronous.
 
 ```js
 async function writeToDb() {
-  // synchronously write to DB
+  // asynchronously write to DB
 }
 writeToDb(); // <- note we have no await here but probably the user intended to await on this!
 ```
