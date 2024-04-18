@@ -47,6 +47,23 @@ Then configure the rules you want to use under the rules section.
 }
 ```
 
+If you're using flat config (`eslint.config.js`), which is default configuration format for eslint since `v.9.0.0`:
+
+```js
+const noFloatingPromise = require("eslint-plugin-no-floating-promise");
+
+module.exports = [
+  {
+    plugins: {
+      "no-floating-promise": noFloatingPromise,
+    },
+    rules: {
+      "no-floating-promise/no-floating-promise": 2
+    }
+  }
+];
+```
+
 # Rule definition
 
 _The `--fix` option on the command line automatically fixes problems reported by this rule._

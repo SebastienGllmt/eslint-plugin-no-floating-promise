@@ -21,7 +21,7 @@ const path = require("path"),
  * Gets the specified parser.
  *
  * @param {string} name - The parser name to get.
- * @returns {function} specificed parser
+ * @returns {object} The specificed parser
  */
 function parser(name) {
     return require(`../../fixtures/parsers/no-floating-promise/${name}.js`);
